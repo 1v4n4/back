@@ -1,0 +1,72 @@
+<%= form_with(model: beach) do |form| %>
+  <% if beach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(beach.errors.count, "error") %> prohibited this beach from being saved:</h2>
+
+      <ul>
+        <% beach.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :county %>
+    <%= form.text_field :county %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :parking %>
+    <%= form.text_field :parking %>
+  </div>
+
+  <div class="field">
+    <%= form.label :restrooms %>
+    <%= form.text_field :restrooms %>
+  </div>
+
+  <div class="field">
+    <%= form.label :campground %>
+    <%= form.text_field :campground %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photo1 %>
+    <%= form.text_field :photo1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photo2 %>
+    <%= form.text_field :photo2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photo3 %>
+    <%= form.text_field :photo3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photo4 %>
+    <%= form.text_field :photo4 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

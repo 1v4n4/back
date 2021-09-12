@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Beaches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>County</th>
+      <th>Location</th>
+      <th>Description</th>
+      <th>Parking</th>
+      <th>Restrooms</th>
+      <th>Campground</th>
+      <th>Photo1</th>
+      <th>Photo2</th>
+      <th>Photo3</th>
+      <th>Photo4</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @beaches.each do |beach| %>
+      <tr>
+        <td><%= beach.name %></td>
+        <td><%= beach.county %></td>
+        <td><%= beach.location %></td>
+        <td><%= beach.description %></td>
+        <td><%= beach.parking %></td>
+        <td><%= beach.restrooms %></td>
+        <td><%= beach.campground %></td>
+        <td><%= beach.photo1 %></td>
+        <td><%= beach.photo2 %></td>
+        <td><%= beach.photo3 %></td>
+        <td><%= beach.photo4 %></td>
+        <td><%= link_to 'Show', beach %></td>
+        <td><%= link_to 'Edit', edit_beach_path(beach) %></td>
+        <td><%= link_to 'Destroy', beach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Beach', new_beach_path %>
