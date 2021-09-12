@@ -1,4 +1,7 @@
+
+
 class BeachesController < ApplicationController
+
   before_action :set_beach, only: %i[ show edit update destroy ]
 
   # GET /beaches or /beaches.json
@@ -8,6 +11,7 @@ class BeachesController < ApplicationController
 
   # GET /beaches/1 or /beaches/1.json
   def show
+
   end
 
   # GET /beaches/new
