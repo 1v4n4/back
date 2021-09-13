@@ -9,8 +9,8 @@ class BeachesController < ApplicationController
 
   # GET /beaches/1 or /beaches/1.json
   def show
-    @beach = Beach.find_by(params[:id])
-    render json: { beach: beach }
+    @beach = Beach.find(params[:id])
+    render json: { beach: @beach }
   end
 
   # GET /beaches/new
