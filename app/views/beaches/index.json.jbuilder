@@ -1,1 +1,1 @@
-json.array! @beaches, partial: "beaches/beach", as: :beach
+json.array! @beaches, partial: 'beaches/beach', as: :beach

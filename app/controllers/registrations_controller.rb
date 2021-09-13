@@ -1,7 +1,7 @@
 class RegistrationsController < ApplicationController
   def index
     @users = User.all
-    render json: { users: @users}
+    render json: { users: @users }
   end
 
   def create

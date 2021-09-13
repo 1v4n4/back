@@ -1,1 +1,1 @@
-json.partial! "beaches/beach", beach: @beach
+json.partial! 'beaches/beach', beach: @beach

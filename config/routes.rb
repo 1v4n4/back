@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :favs
   resources :beaches
   resources :sessions, only: [:create]
   resources :registrations, only: [:create, :index]
