@@ -1,52 +1,94 @@
 class BeachesController < ApplicationController
-  # before_action :set_beach, only: %i[ show edit update destroy ]
+   before_action :set_beach, only: %i[ show edit update destroy ]
 
-  # GET /beaches or /beaches.json
   def index
     @beaches = Beach.all
-    render json: { beaches: @beaches }
+    render json: @beaches
   end
 
-  # GET /beaches/1 or /beaches/1.json
-  def show
+def humboldt
+  @humboldt = Beach.humboldt
+  render json: @humboldt
+end
+
+def mendosino
+  @mendosino = Beach.mendosino
+  render json: @mendosino
+end
+
+def sonoma
+  @sonoma = Beach.sonoma
+  render json: @sonoma
+end
+
+def marin
+  @marin = Beach.marin
+  render json: @marin
+end
+
+
+def sanfrancisco
+  @sanfrancisco = Beach.sanfrancisco
+  render json: @sanfrancisco
+end
+
+
+def sanmateo
+  @humboldt = Beach.sanmateo
+  render json: @sanmateo
+end
+
+def santacruz
+  @santacruz = Beach.santacruz
+  render json: @santacruz
+end
+def monterey
+  @monterey = Beach.monterey
+  render json: @monterey
+end
+
+def sanluis
+  @sanluis = Beach.sanluis
+  render json: @sanluis
+end
+
+
+def santabarbara
+  @santabarbara = Beach.santabarbara
+  render json: @santabarbara
+end
+
+def ventura
+  @ventura = Beach.ventura
+  render json: @ventura
+end
+
+def losangeles
+  @losangeles = Beach.losangeles
+  render json: @losangeles
+end
+
+def orange
+  @orange = Beach.orange
+  render json: @orange
+end
+
+def sandiego
+  @sandiego = Beach.sandiego
+  render json: @sandiego
+end
+
+def show
     @beach = Beach.find(params[:id])
     render json: { beach: @beach }
   end
 
-  # GET /beaches/new
-  def new
-    @beach = Beach.new
-  end
-
-  # GET /beaches/1/edit
-  def edit; end
-
-  # POST /beaches or /beaches.json
-  def create
+def create
     @beach = Beach.create!(beach_params)
 
     render json: @beach, status: :created
   end
 
-  # PATCH/PUT /beaches/1 or /beaches/1.json
-  def update
-    respond_to do |format|
-      if @beach.update(beach_params)
-        format.html { redirect_to @beach, notice: 'Beach was successfully updated.' }
-        format.json { render :show, status: :ok, location: @beach }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @beach.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /beaches/1 or /beaches/1.json
-  def destroy
-    beach = Beach.find(params[:id])
-    beach.delete
-    head :no_content
-  end
 
   private
 

@@ -20,7 +20,6 @@ class FavsController < ApplicationController
   # POST /favs or /favs.json
   def create
     @fav = Fav.create!(fav_params)
-
     render json: { fav: @fav, status: :created }
   end
 

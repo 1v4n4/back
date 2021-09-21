@@ -6,7 +6,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   end
 
   allow do
-    origins 'https://my-app.heroku.com'
+    origins 'https://1v4n4.github.io/beach/'
     resource '*', headers: :any, methods: [:get, :post, :patch, :put, :delete, :options, :head],
     credentials:true
   end
