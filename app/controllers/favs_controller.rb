@@ -3,7 +3,9 @@ class FavsController < ApplicationController
 
   # GET /favs or /favs.json
   def index
-    @favs = Fav.all
+    @favs = Fav.where(params[:user_id])
+    render json: @favs
+    puts @favs
   end
 
   # GET /favs/1 or /favs/1.json

@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   resources :beaches, only: [ :index, :create, :show]
   resources :sessions, only: [:create]
   resources :registrations, only: [:create, :index]
-  get :logged_in, to: "sessions#logged_in"
   root to: "beaches#index"
   get :humboldt, to: "beaches#humboldt"
   get :mendosino, to: "beaches#mendocino"
