@@ -3,7 +3,7 @@ class FavsController < ApplicationController
 
   # GET /favs or /favs.json
   def index
-    @favs = Fav.where(params[:user_id])
+    @favs = Fav.where(params[:user_id]).includes(%i[beach])
     render json: @favs
     puts @favs
   end
@@ -33,12 +33,10 @@ class FavsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_fav
     @fav = Fav.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def fav_params
     params.require(:fav).permit(:user_id, :beach_id)
   end

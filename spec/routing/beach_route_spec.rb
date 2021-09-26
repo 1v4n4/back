@@ -8,8 +8,8 @@ RSpec.describe BeachesController, type: :routing do
     it 'routes to #create' do
       expect(post: '/beaches').to route_to('beaches#create')
     end
-    it 'routes to #destroy' do
-      expect(delete: '/beaches/1').to route_to('beaches#destroy', id: '1')
+    it 'routes to #show' do
+      expect(get: '/beaches/1').to route_to('beaches#show', id: '1')
     end
   end
 end
