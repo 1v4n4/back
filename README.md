@@ -3,7 +3,7 @@
 API is a database of beaches in California with includes data like the name of the beach, location, description, available facilities, etc... It is created using the API of California Coastal Commission https://www.coastal.ca.gov/open-data/api-docs/ and deployed on Heroku.
 This project also includes a frontend which is a mobile app.
 
-### [Live link](https://obscure-ravine-72601.herokuapp.com)
+### [Live link](https://calbeach.herokuapp.com)
 ### [Link to frontend app](https://1v4n4.github.io/beach/)
 
 ## Built with
@@ -17,7 +17,7 @@ This project also includes a frontend which is a mobile app.
 - cd into the project
 - Run bundle install to install dependencies
 - In the terminal run rails server to open up the live server
-- Append one of the endpoints to http://localhost:3000/ to get/post data
+- Point your browser to http://localhost:3000/ to load the app to get data
 
 ## Testing
 The API uses RSpec for testing. Run `rspec` to test it.
