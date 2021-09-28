@@ -1,6 +1,6 @@
 # Cal Beach API
 
-API is a database of beaches in California with includes data like the name of the beach, location, description, available facilities, etc... It is created using the API of California Coastal Commission https://www.coastal.ca.gov/open-data/api-docs/ and deployed on Heroku.
+API is a database of beaches in California with includes data like the name of the beach, location, description, available facilities, etc... There are endpoints for a list of places, a list of places by county, a list of users, a list of user's favorite places, and for every beach. API is created using the API of California Coastal Commission https://www.coastal.ca.gov/open-data/api-docs/ and deployed on Heroku.
 This project also includes a frontend which is a mobile app.
 
 ### [Live link](https://calbeach.herokuapp.com)
