@@ -87,6 +87,8 @@ GEM
       database_cleaner-core (~> 2.0.0)
     database_cleaner-core (2.0.1)
     diff-lcs (1.4.4)
+    email_validator (2.2.3)
+      activemodel
     erubi (1.10.0)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
@@ -267,6 +269,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   database_cleaner
+  email_validator (~> 2.2, >= 2.2.3)
   factory_bot_rails (~> 6.2)
   faker
   httparty (~> 0.19.0)

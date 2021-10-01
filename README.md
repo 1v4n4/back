@@ -5,6 +5,7 @@ This project also includes a frontend mobile app.
 
 ### [Live link](https://calbeach.herokuapp.com)
 ### [Link to frontend app](https://1v4n4.github.io/beach/)
+### [Link to frontend repository](https://github.com/1v4n4/beach)
 
 ## Built with
 - Ruby

@@ -5,21 +5,26 @@ class RegistrationsController < ApplicationController
   end
 
   def create
-    user = User.create!(
-      name: params['user']['name'],
-      email: params['user']['email'],
-      password: params['user']['password'],
-      password_confirmation: params['user']['password_confirmation']
-    )
-
+    user = User.find_by(email: params[:user][:email])
     if user
-      session[:user_id] = user.id
-      render json: {
-        status: :created,
-        user: user
-      }
+      render json: { message: 'User already exists' }
     else
-      render json: { status: 500 }
+
+      user = User.create!(
+        name: params['user']['name'],
+        email: params['user']['email'],
+        password: params['user']['password'],
+        password_confirmation: params['user']['password_confirmation']
+      )
+      if user
+        session[:user_id] = user.id
+        render json: {
+          status: :created,
+          user: user
+        }
+      else
+        render json: { message: user.errors.full_messages[0] }, status: 422
+      end
     end
   end
 end
